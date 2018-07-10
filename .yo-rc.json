@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorEmail": "greenfavo@qq.com",
+      "authorUrl": "https://github.com/greenfavo",
+      "authorName": "shijianan"
+    }
+  }
+}
