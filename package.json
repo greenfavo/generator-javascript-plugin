@@ -80,6 +80,9 @@
       "prettier"
     ]
   },
-  "repository": "git@github.com:greenfavo/generator-javascript-plugin.git",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:greenfavo/generator-javascript-plugin.git"
+  },
   "license": "MIT"
 }
