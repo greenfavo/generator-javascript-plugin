@@ -1,4 +1,4 @@
-# generator-javascript-plugin [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-javascript-plugin [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 > javascript plugin generator 快速生成javascript项目
 
 ## Installation
@@ -40,7 +40,3 @@ MIT © [shijianan](https://github.com/greenfavo)
 [npm-url]: https://npmjs.org/package/generator-javascript-plugin
 [travis-image]: https://travis-ci.org/greenfavo/generator-javascript-plugin.svg?branch=master
 [travis-url]: https://travis-ci.org/greenfavo/generator-javascript-plugin
-[daviddm-image]: https://david-dm.org/greenfavo/generator-javascript-plugin.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/greenfavo/generator-javascript-plugin
-[coveralls-image]: https://coveralls.io/repos/greenfavo/generator-javascript-plugin/badge.svg
-[coveralls-url]: https://coveralls.io/r/greenfavo/generator-javascript-plugin

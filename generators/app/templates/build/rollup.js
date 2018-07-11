@@ -17,7 +17,7 @@ const inputOption = {
     babel({
       exclude: 'node_modules/**', // 只编译我们的源代码
       babelrc: false, // 防止和babel-register冲突
-      presets: [['es2015', { modules: false }]]
+      presets: [['env', { modules: false }]]
     })
   ]
 }

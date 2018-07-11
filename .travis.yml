@@ -3,4 +3,3 @@ node_js:
   - "node"
 script:
   - npm run test
-after_script: cat ./coverage/lcov.info | coveralls
