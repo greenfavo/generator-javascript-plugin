@@ -18,6 +18,7 @@
     "yeoman-generator"
   ],
   "devDependencies": {
+    "conventional-changelog-cli": "^2.0.1",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-config-xo": "^0.20.1",
@@ -44,7 +45,8 @@
   "scripts": {
     "prepublishOnly": "nsp check",
     "pretest": "eslint . --fix",
-    "test": "jest"
+    "test": "jest",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "lint-staged": {
     "*.js": [
