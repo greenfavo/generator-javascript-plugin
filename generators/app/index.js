@@ -20,6 +20,12 @@ module.exports = class extends Generator {
     const prompts = [
       {
         type: 'input',
+        name: 'namespace',
+        message: 'Please input your project namespace,such as @xunlei:',
+        default: ''
+      },
+      {
+        type: 'input',
         name: 'name',
         message: 'Please input project name:',
         default: 'js-plugin'
@@ -40,17 +46,19 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'keywords',
         message: 'Package keywords (comma to split)',
-        default: 'utils,plugin'
+        default: 'javascript,plugin'
       },
       {
         type: 'input',
         name: 'author',
-        message: '"Author\'s Name"'
+        message: '"Author\'s Name"',
+        default: ''
       },
       {
         type: 'input',
         name: 'email',
-        message: '"Author\'s Email"'
+        message: '"Author\'s Email"',
+        default: ''
       },
       {
         type: 'input',
@@ -75,6 +83,11 @@ module.exports = class extends Generator {
     return this.prompt(prompts).then(props => {
       // To access props later use this.props.someAnswer;
       this.props = props;
+      if (this.props.namespace) {
+        this.props.fullName = this.props.namespace + '/' + this.props.name;
+      } else {
+        this.props.fullName = this.props.name;
+      }
     });
   }
 
@@ -127,6 +140,7 @@ module.exports = class extends Generator {
       this.destinationPath('package.json'),
       {
         name: this.props.name,
+        fullName: this.props.fullName,
         description: this.props.description,
         keywords: this.props.keywords.split(','),
         author: this.props.author,
@@ -145,6 +159,7 @@ module.exports = class extends Generator {
       this.destinationPath('README.md'),
       {
         name: this.props.name,
+        fullName: this.props.fullName,
         description: this.props.description,
         author: this.props.author,
         year: new Date().getFullYear()
@@ -191,6 +206,7 @@ module.exports = class extends Generator {
       this.destinationPath('src/index.js'),
       {
         name: this.props.name,
+        fullName: this.props.fullName,
         author: this.props.author,
         license: this.props.license,
         camelCaseName: this._getCamelCaseName(this.props.name),

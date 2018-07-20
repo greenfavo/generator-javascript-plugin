@@ -1,5 +1,5 @@
 {
-  "name": "<%= name %>",
+  "name": "<%= fullName %>",
   "description": "<%= description %>",
   "version": "1.0.0",
   "private": false,
@@ -13,7 +13,7 @@
     "prebuild": "npm run lint && npm run test && npm run doc",
     "build": "node ./build/rollup.js",
     "lint": "eslint --ext .js, src",
-    "test": "mocha --require babel-register --require babel-polyfill --bail",
+    "test": "mocha --require babel-register --bail",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "doc": "jsdoc -c ./jsdoc.json"
   },
@@ -51,8 +51,5 @@
     "rollup": "^0.50.0",
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-node-resolve": "^3.0.0"
-  },
-  "dependencies": {
-    "babel-polyfill": "^6.26.0"
   }
 }

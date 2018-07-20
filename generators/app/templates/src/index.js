@@ -1,5 +1,5 @@
 /**
-  * <%= name %>
+  * <%= fullName %>
   * (c) <%= year %> <%= author %>
   * @license <%= license %>
   */
