@@ -1,8 +1,14 @@
-# <%= name %>
+# <%= fullName %>
 
 > <%= description %>
 
-### Development Setup
+## Installation
+
+```bash
+npm install <%= fullName %>
+```
+
+## Development Setup
 
 ``` bash
 # install deps
